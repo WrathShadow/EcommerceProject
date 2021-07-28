@@ -1,0 +1,103 @@
+{% load static %}
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Register</title>
+  <meta name="generator" content="Google Web Designer 11.0.2.0415">
+  <link href="gwdgesture_style.css" rel="stylesheet" data-version="7" data-exports-type="gwd-gesture">
+  <link href="gwdimageeffect_style.css" rel="stylesheet" data-version="4" data-exports-type="gwd-image-effect">
+  <style type="text/css" id="gwd-text-style">
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+  </style>
+  <style type="text/css">
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      background-image: url('{% static 'img/market.jpg' %}');
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+      background-size: 100% 100%;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+    }
+    .gwd-p-1gu1 {
+      height: auto;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: auto;
+    }
+    .gwd-form-m1jq {   
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40%;
+      height: 50%;
+
+    }
+    .gwd-div-1cx6 {
+      transform-origin: 398px 198px 0px;
+      border-style: outset;
+      margin: 0px;
+      transform: translate3d(0px, -41px, 0px);
+      transform-style: preserve-3d;
+      border-radius: 10px;
+      padding: 10%;
+      background-color: white;
+    }
+    
+  </style>
+  <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
+  <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
+  <script data-source="gwdgesture_min.js" data-version="7" data-exports-type="gwd-gesture" src="gwdgesture_min.js"></script>
+  <script data-source="gwdimageeffect_min.js" data-version="4" data-exports-type="gwd-image-effect" src="gwdimageeffect_min.js"></script>
+</head>
+
+<body class="htmlNoPages">
+  <script integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <p class="gwd-p-1gu1">
+  </p>
+  <form method="post" action="register" class="gwd-form-m1jq">
+    {% csrf_token %}
+    <div class="myform gwd-div-1cx6">
+      <center><h4>REGISTER</h4></center><br>
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" placeholder="username" name="username">
+      </div>
+      <div class="form-group gwd-div-1cwl">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="password" name="password">
+      </div>
+      <button type="submit" class="btn btn-primary gwd-button-1b90">REGISTER</button>
+    </div>
+    <p>You will be registered and will be logged in automatically....</p><br>
+    {% for message in messages %}
+        <h4 style="color:red;">{{ message }}</h4>
+        <a class="btn btn-primary" href={% url 'login' %}>LOGIN</a>
+    {% endfor %}
+  </form>
+</body>
+
+</html>

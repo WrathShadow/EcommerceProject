@@ -1,0 +1,92 @@
+body {
+  font-family: "poppins", sans-serif;
+}
+.nav-item {
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.dropdown-item {
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.my_footer {
+  background-color: #696969;
+  height: 60px;
+}
+.my_footer p {
+  padding-top: 20px;
+  font-size: 14px;
+}
+
+/** Category page **/
+
+.my_row_class {
+  padding-top: 15px;
+}
+.my_row_class .mx-auto p a {
+  color: #000;
+  font-size: 12px;
+  text-decoration: none;
+}
+.my_image {
+  width: 100%;
+  height: auto;
+}
+.my_title {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.my_image_padding {
+  padding-top: 5px;
+}
+.my_bottom_margin {
+  margin-bottom: 10px;
+}
+.card-body h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.my_search_text {
+  padding-top: 20px;
+}
+.my_custom_table {
+  min-width: 400px;
+  font-size: 14px;
+}
+.my_custom_thead {
+  width: 100px;
+  height: 100px;
+}
+.custom a {
+  text-decoration: None;
+}
+.custom_image {
+  width: 100px;
+  height: 100px;
+}
+.custom_icon {
+  text-decoration: none;
+  color: #868e96 !important;
+}
+.my_custom_button {
+  margin-top: 5px;
+}
+.myform{
+  position: absolute;
+  width: 989px;
+  height: 414px;
+  left: calc(50% - 989px/2 - 0.5px);
+  top: calc(50% - 414px/2 + 10px);
+  background-color:white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.card{
+  border-radius: 4px;box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);padding: 14px 80px 18px 36px;cursor: pointer;
+}

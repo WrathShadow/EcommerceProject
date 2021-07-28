@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+  {{product.desc | truncatewords:155 }}
+{% endblock %}
+{% block title %}
+  {{product.name}}--E-Cart
+{% endblock %}
+{% block content %}
+<br><br><br>
+
+<div class="container" style="background-color: white;"> <br>
+    
+    <div>
+      <center><img src="{{product.image.url}}" alt="{{product.name}}" style="width:300px;height:300px;"></center>
+    </div>
+  <div>
+    <div>
+      <center><h4 style="text-transform: uppercase;">{{product.name}}</h4><br></center>
+      <label style="text-transform: uppercase;">Description</label><br>
+      <p>{{product.desc}}</p>
+      <p>Rs. {{product.price}}</p>
+      {% if product.stock <= 0 %}
+        <p><b>Out of Stock</b></p>
+      {% else %}
+        <a class="btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add To Cart</a>
+      {% endif %}
+    </div>
+  </div>
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+</div>
+{% endblock %}
